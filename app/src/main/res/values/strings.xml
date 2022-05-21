@@ -1,6 +1,13 @@
 <resources>
     <string name="app_name">pagos</string>
     <string name="nombre">Magner Rivera</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="datos">Datos para el pago</string>
+    <string name="diligenciar">Por favor diligencie los datos necesarios</string>
+    <string name="diliNombre">Nombre </string>
+    <string name="correo">Correo electronico </string>
+    <string name="numero">Numero de celular</string>
+    <string name="numeroTarjeta">Numero de la tarjeta</string>
+    <string name="fecha">Fecha de vencimiento</string>
+    <string name="codigo">Código de seguridad</string>
+    <string name="continuar">CONTINUAR</string>
 </resources>
