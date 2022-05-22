@@ -34,8 +34,24 @@ class GenerarPagos : Fragment() {
             val fecha = view.findViewById<EditText>(R.id.fecha).run {
                 text.toString()
             }
-            validarCard(numero)?.let {
-                navigateTo(GenerarPagosDirections.actionGenerarPagosToOpcion(Pagos(it, nombre, correo, numero, fecha)))
+            if (nombre != "" || correo != "" || numero != "" || fecha != "") {
+                validarCard(numero)?.let {
+                    navigateTo(
+                        GenerarPagosDirections.actionGenerarPagosToOpcion(
+                            Pagos(
+                                it,
+                                nombre,
+                                correo,
+                                numero,
+                                fecha
+                            )
+                        )
+                    )
+                    Toast.makeText(requireContext(), "Bienvenido", Toast.LENGTH_SHORT).show()
+                }
+            }
+            else{
+                Toast.makeText(requireContext(), "Por favor llene los campos", Toast.LENGTH_SHORT).show()
             }
         }
         return view
@@ -44,8 +60,47 @@ class GenerarPagos : Fragment() {
     fun validarCard(numero: String): String? {
         val tarjeta = numero.toLong()
 
-        if (tarjeta == 4005580000000040){
-        return "Rechaza"
+        if (tarjeta == 4005580000000040) {
+            return "Rechazada"
+        }
+        if (tarjeta == 7000000027) {
+            return "Autorizado"
+        }
+        if (tarjeta == 4111111111111111) {
+            return "Rechazada"
+        }
+        if (tarjeta == 4212121212121214) {
+            return "Pendiente"
+        }
+        if (tarjeta == 4666666666666669) {
+            return "Pendiente"
+        }
+        if (tarjeta == 5424000000000015) {
+            return "Autorizada"
+        }
+        if (tarjeta == 5406251000000008) {
+            return "Autorizada"
+        }
+        if (tarjeta == 370000000000002) {
+            return "Autorizada"
+        }
+        if (tarjeta == 36018623456787) {
+            return "Autorizada"
+        }
+        if (tarjeta == 8130010000000000) {
+            return "Autorizada"
+        }
+        if (tarjeta == 4027390000000006) {
+            return "Autorizada"
+        }
+        if (tarjeta == 4215440000000001) {
+            return "Declinada"
+        }
+        if (tarjeta == 5907120000000009) {
+            return "Declinada"
+        }
+        if (tarjeta == 6372000000000007) {
+            return "Declinada"
         }
         Toast.makeText(requireContext(), "No se encuentra en el rango", Toast.LENGTH_SHORT).show()
         return null
