@@ -51,5 +51,8 @@
         <argument
             android:name="datos"
             app:argType="com.example.pagos.data.Pagos" />
+        <action
+            android:id="@+id/action_resumenTrans_to_opcion"
+            app:destination="@id/opcion" />
     </fragment>
 </navigation>

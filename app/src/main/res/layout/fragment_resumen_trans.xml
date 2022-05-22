@@ -47,14 +47,14 @@
                 android:layout_marginTop="200dp"
                 android:layout_marginStart="30dp"
                 android:layout_toEndOf="@+id/estado"
-                android:textColor="@color/teal_700"
+                android:textColor="@color/naranja"
                 android:textSize="25sp" />
 
             <TextView
                 android:id="@+id/nombreVeri"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="300dp"
+                android:layout_marginTop="280dp"
                 android:hint="@string/diliNombre"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
@@ -63,15 +63,15 @@
                 android:id="@+id/traerNombre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="340dp"
-                android:textColor="@color/teal_700"
+                android:layout_marginTop="320dp"
+                android:textColor="@color/naranja"
                 android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/correoVeri"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="380dp"
+                android:layout_marginTop="360dp"
                 android:hint="@string/correo"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
@@ -80,15 +80,15 @@
                 android:id="@+id/traerCorreo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="420dp"
-                android:textColor="@color/teal_700"
+                android:layout_marginTop="400dp"
+                android:textColor="@color/naranja"
                 android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/numeroTarjetaVeri"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="460dp"
+                android:layout_marginTop="440dp"
                 android:hint="@string/numeroTarjeta"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
@@ -97,15 +97,15 @@
                 android:id="@+id/traerTarjeta"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="500dp"
-                android:textColor="@color/teal_700"
+                android:layout_marginTop="480dp"
+                android:textColor="@color/naranja"
                 android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/fechaVeri"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="540dp"
+                android:layout_marginTop="520dp"
                 android:hint="@string/fecha"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
@@ -114,28 +114,39 @@
                 android:id="@+id/traerFecha"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="580dp"
-                android:textColor="@color/teal_700"
+                android:layout_marginTop="560dp"
+                android:textColor="@color/naranja"
                 android:textSize="20sp" />
 
-            <RelativeLayout
+            <LinearLayout
                 android:id="@+id/navigatorBar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
-                android:layout_marginTop="720dp">
+                android:layout_marginTop="720dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_cancelar"
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_background"
+                    android:text="@string/cancelar"
+                    android:textSize="15sp" />
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn_continuar"
                     android:layout_width="300dp"
                     android:layout_height="match_parent"
                     android:layout_margin="5dp"
+                    android:layout_weight="1"
                     android:background="@drawable/btn_background"
                     android:text="@string/continuar"
-                    android:textSize="15sp"
-                    android:layout_centerHorizontal="true"/>
+                    android:textSize="15sp" />
 
-            </RelativeLayout>
+            </LinearLayout>
         </RelativeLayout>
     </ScrollView>
 </layout>
