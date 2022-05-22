@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".fragment.GenerarPagos">
 
@@ -10,32 +9,33 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
             android:layout_marginTop="10dp">
 
             <ImageView
                 android:id="@+id/imagenInicio"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="250dp"
-                android:layout_marginTop="20dp"
-                android:src="@drawable/ic_factura" />
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_bienvenido" />
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginStart="120dp"
-                android:layout_marginTop="30dp"
-                android:text="@string/datos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_toEndOf="@+id/imagenInicio"
+                android:text="@string/bienvenido"
+                android:textAlignment="center"
                 android:textColor="@color/naranja"
                 android:textSize="25sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="100dp"
+                android:layout_marginTop="120dp"
                 android:text="@string/diligenciar"
                 android:textColor="@color/naranja"
                 android:textSize="20sp" />
@@ -44,7 +44,7 @@
                 android:id="@+id/nombre"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="180dp"
+                android:layout_marginTop="200dp"
                 android:hint="@string/diliNombre"
                 android:inputType="text" />
 
@@ -52,7 +52,7 @@
                 android:id="@+id/correo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="260dp"
+                android:layout_marginTop="280dp"
                 android:hint="@string/correo"
                 android:inputType="text" />
 
@@ -60,7 +60,7 @@
                 android:id="@+id/numero"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="340dp"
+                android:layout_marginTop="360dp"
                 android:hint="@string/numero"
                 android:inputType="number" />
 
@@ -68,7 +68,7 @@
                 android:id="@+id/numeroTarjeta"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="420dp"
+                android:layout_marginTop="440dp"
                 android:hint="@string/numeroTarjeta"
                 android:inputType="number" />
 
@@ -76,7 +76,7 @@
                 android:id="@+id/fecha"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="500dp"
+                android:layout_marginTop="520dp"
                 android:hint="@string/fecha"
                 android:inputType="datetime" />
 
@@ -84,9 +84,9 @@
                 android:id="@+id/codigo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="580dp"
-                android:inputType="number"
-                android:hint="@string/codigo" />
+                android:layout_marginTop="600dp"
+                android:hint="@string/codigo"
+                android:inputType="numberPassword" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnContinuar"
@@ -94,8 +94,8 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_marginStart="40dp"
-                android:layout_marginTop="660dp"
-                android:background="@drawable/btn_continuar"
+                android:layout_marginTop="680dp"
+                android:background="@drawable/btn_background"
                 android:text="@string/continuar" />
 
         </RelativeLayout>

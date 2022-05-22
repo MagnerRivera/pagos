@@ -6,8 +6,50 @@
     app:startDestination="@id/generarPagos">
 
     <fragment
+        android:id="@+id/opcion"
+        android:name="com.example.pagos.fragment.Opcion"
+        android:label="fragment_opcion"
+        tools:layout="@layout/fragment_opcion">
+        <action
+            android:id="@+id/action_opcion_to_resumenTrans"
+            app:destination="@id/resumenTrans" />
+        <action
+            android:id="@+id/action_opcion_to_visualizarPagos"
+            app:destination="@id/visualizarPagos" />
+        <action
+            android:id="@+id/action_opcion_to_generarPagos"
+            app:destination="@id/generarPagos" />
+        <argument
+            android:name="datos"
+            app:argType="com.example.pagos.data.Pagos" />
+    </fragment>
+    <fragment
         android:id="@+id/generarPagos"
         android:name="com.example.pagos.fragment.GenerarPagos"
         android:label="fragment_generar_pagos"
-        tools:layout="@layout/fragment_generar_pagos" />
+        tools:layout="@layout/fragment_generar_pagos">
+        <action
+            android:id="@+id/action_generarPagos_to_opcion"
+            app:destination="@id/opcion" />
+    </fragment>
+    <fragment
+        android:id="@+id/visualizarPagos"
+        android:name="com.example.pagos.fragment.VisualizarPagos"
+        android:label="fragment_visualizar_pagos"
+        tools:layout="@layout/fragment_visualizar_pagos">
+        <argument
+            android:name="datos"
+            app:argType="com.example.pagos.data.Pagos" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/resumenTrans"
+        android:name="com.example.pagos.fragment.ResumenTrans"
+        android:label="fragment_resumen_trans"
+        tools:layout="@layout/fragment_resumen_trans">
+
+        <argument
+            android:name="datos"
+            app:argType="com.example.pagos.data.Pagos" />
+    </fragment>
 </navigation>
