@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">pagos</string>
     <string name="nombre">Magner Rivera</string>
-    <string name="datos">Datos para el pago</string>
+    <string name="resumen">Resumen del pago</string>
     <string name="diligenciar">Por favor diligencie los datos necesarios</string>
     <string name="diliNombre">Nombre </string>
     <string name="correo">Correo electronico </string>
@@ -10,4 +10,11 @@
     <string name="fecha">Fecha de vencimiento</string>
     <string name="codigo">Código de seguridad</string>
     <string name="continuar">CONTINUAR</string>
+    <string name="cancelar">CANCELAR</string>
+    <string name="estado">ESTADO: </string>
+    <string name="bienvenido">Bienvenido a Evertec</string>
+    <string name="menu">Menú de usuario</string>
+    <string name="opciones">Elije una de las opciones por favor</string>
+    <string name="ver">Ver las transacciones</string>
+    <string name="vovler">Volver</string>
 </resources>
