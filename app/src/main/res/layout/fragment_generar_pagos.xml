@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".fragment.GenerarPagos">
 
@@ -11,8 +12,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginTop="10dp">
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp">
 
             <ImageView
                 android:id="@+id/imagenInicio"
@@ -40,53 +41,115 @@
                 android:textColor="@color/naranja"
                 android:textSize="20sp" />
 
-            <EditText
-                android:id="@+id/nombre"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/nombre_container"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="200dp"
+                android:layout_marginTop="170dp"
                 android:hint="@string/diliNombre"
-                android:inputType="text" />
+                app:helperText="*Requerido"
+                app:startIconDrawable="@drawable/ic_nombre">
 
-            <EditText
-                android:id="@+id/correo"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/nombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/correo_container"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="280dp"
+                android:layout_marginTop="270dp"
                 android:hint="@string/correo"
-                android:inputType="text" />
+                app:helperText="*Requerido"
+                app:startIconDrawable="@drawable/ic_email">
 
-            <EditText
-                android:id="@+id/numero"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/correo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/numero_container"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="360dp"
+                android:layout_marginTop="370dp"
                 android:hint="@string/numero"
-                android:inputType="number" />
+                app:helperText="*Requerido"
+                app:startIconDrawable="@drawable/ic_movile">
 
-            <EditText
-                android:id="@+id/numeroTarjeta"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/numero"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/numeroTarjeta_container"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="440dp"
+                android:layout_marginTop="470dp"
                 android:hint="@string/numeroTarjeta"
-                android:inputType="number" />
+                app:helperText="*Requerido"
+                app:startIconDrawable="@drawable/ic_card">
 
-            <EditText
-                android:id="@+id/fecha"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/numeroTarjeta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/fecha_container"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="520dp"
+                android:layout_marginTop="570dp"
+                android:clickable="false"
+                android:focusable="false"
                 android:hint="@string/fecha"
-                android:inputType="datetime" />
+                app:helperText="*Requerido"
+                app:startIconDrawable="@drawable/ic_card">
 
-            <EditText
-                android:id="@+id/codigo"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/fecha"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:inputType="date" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/codigo_container"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="600dp"
+                android:layout_marginTop="670dp"
                 android:hint="@string/codigo"
-                android:inputType="numberPassword" />
+                app:endIconMode="password_toggle"
+                app:helperText="*Requerido"
+                app:startIconDrawable="@drawable/ic_lock">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/codigo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberPassword" />
+
+            </com.google.android.material.textfield.TextInputLayout>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnContinuar"
@@ -94,7 +157,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_marginStart="40dp"
-                android:layout_marginTop="680dp"
+                android:layout_marginTop="780dp"
                 android:background="@drawable/btn_background"
                 android:text="@string/continuar" />
 

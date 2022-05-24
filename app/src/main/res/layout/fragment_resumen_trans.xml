@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".fragment.Opcion">
 
@@ -35,71 +36,113 @@
                 android:id="@+id/estado"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="200dp"
+                android:layout_marginTop="150dp"
                 android:hint="@string/estado"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
 
-            <TextView
-                android:id="@+id/traerEstado"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/traerEstado_container"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="200dp"
                 android:layout_marginStart="30dp"
+                android:layout_marginTop="128dp"
                 android:layout_toEndOf="@+id/estado"
-                android:textColor="@color/naranja"
-                android:textSize="25sp" />
+                android:enabled="false"
+                android:textSize="25sp"
+                app:startIconDrawable="@drawable/ic_card">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/traerEstado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
                 android:id="@+id/nombreVeri"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="280dp"
+                android:layout_marginTop="230dp"
                 android:hint="@string/diliNombre"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
-            <TextView
-                android:id="@+id/traerNombre"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/traerNombre_container"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="320dp"
-                android:textColor="@color/naranja"
-                android:textSize="20sp" />
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="210dp"
+                android:layout_toEndOf="@+id/nombreVeri"
+                android:enabled="false"
+                android:textSize="25sp"
+                app:startIconDrawable="@drawable/ic_nombre">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/traerNombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
                 android:id="@+id/correoVeri"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="360dp"
+                android:layout_marginTop="320dp"
                 android:hint="@string/correo"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
-            <TextView
-                android:id="@+id/traerCorreo"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/traerCorreo_container"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="400dp"
-                android:textColor="@color/naranja"
-                android:textSize="20sp" />
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="300dp"
+                android:layout_toEndOf="@+id/correoVeri"
+                android:enabled="false"
+                android:textSize="25sp"
+                app:startIconDrawable="@drawable/ic_email">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/traerCorreo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
                 android:id="@+id/numeroTarjetaVeri"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="440dp"
+                android:layout_marginTop="420dp"
                 android:hint="@string/numeroTarjeta"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
-            <TextView
-                android:id="@+id/traerTarjeta"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/traerTarjeta_container"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="480dp"
-                android:textColor="@color/naranja"
-                android:textSize="20sp" />
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="400dp"
+                android:layout_toEndOf="@+id/correoVeri"
+                android:enabled="false"
+                android:textSize="25sp"
+                app:startIconDrawable="@drawable/ic_card">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/traerTarjeta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
                 android:id="@+id/fechaVeri"
@@ -110,20 +153,31 @@
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
-            <TextView
-                android:id="@+id/traerFecha"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/traerFecha_container"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="560dp"
-                android:textColor="@color/naranja"
-                android:textSize="20sp" />
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="500dp"
+                android:layout_toEndOf="@+id/fechaVeri"
+                android:enabled="false"
+                android:textSize="25sp"
+                app:startIconDrawable="@drawable/ic_card">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/traerFecha"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
 
             <LinearLayout
                 android:id="@+id/navigatorBar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
-                android:layout_marginTop="720dp"
+                android:layout_marginTop="650dp"
                 android:orientation="horizontal">
 
                 <androidx.appcompat.widget.AppCompatButton

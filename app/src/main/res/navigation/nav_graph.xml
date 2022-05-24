@@ -40,6 +40,9 @@
         <argument
             android:name="datos"
             app:argType="com.example.pagos.data.Pagos" />
+        <action
+            android:id="@+id/action_visualizarPagos_to_opcion"
+            app:destination="@id/opcion" />
     </fragment>
 
     <fragment
